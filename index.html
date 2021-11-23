@@ -25,10 +25,9 @@
   <link rel="stylesheet" href="css/cssPractice.css">
 
   <script>
-    $("header-color-changer").change(function () {
-      var selectedColor = $(this).children("option:selected").val("WHT");
-      alert("You have selected the color: " + selectedColor)
-    });
+    $(document).ready(function () {
+      $("#header-color-changer").children("option:selected").val();
+    })
 
   </script>
 
@@ -42,76 +41,77 @@
 
 <div id="assignment-div">
 
-  <!--
-  <p>
+  <div class="test-group"></div>
+  <p class="test-paragraph">
     This is a test.
   </p>
 
-  <label>Change Test Paragraph</label>
   <form id="test">
-    <select name="color" id="color">
-      <option value="color">Blue</option>
-      <option value="color">Red</option>
 
-    </select>
-
-    <select name="font-size" id="font-size">
-      <option value="size">100px</option>
-      <option value="size">200px</option>
-
-    </select>
-
-    <select name="background-color" id="background-color">
-      <option value="b-color">Blue</option>
-      <option value="b-color">Red</option>
-
-    </select>
 
   </form>
 
-  -->
+
+
+  <script>
+    function changeColor(getColor) {
+      let color = document.querySelector('.test-paragraph');
+      let selectColor = getColor.value;
+      color.style.color = selectColor;
+    }
+  </script>
+
+  <script>
+    function changeFontSize(getSize) {
+      let size = document.querySelector('.test-paragraph');
+      let selectSize = getSize.value;
+      size.style.fontSize = selectSize;
+    }
+  </script>
+
+  <script>
+    function changeBackgroundColor(getColor) {
+      let color = document.querySelector('.test-paragraph');
+      let selectColor = getColor.value;
+      color.style.background = selectColor;
+    }
+  </script>
 
   <label>Change Header Color</label>
   <form id="user-choice">
-    <select name="planet" id="header-color-changer">
-    <option value="WHT">White</option>
-    <option value="BLK">Black</option>
-    <option value="RED">Red</option>
-    <option value="BLU">Blue</option>
-    <option value="PUR">Purple</option>
-    <option value="YEL">Yellow</option>
-    <option value="ORA">Orange</option>
-    <option value="GRE">Green</option>
+    <select name="planet" class="header-color-changer" onchange="changeColor(this)">
+    <option value="#ffffff">White</option>
+    <option value="#000000">Black</option>
+    <option value="#ff0000">Red</option>
+    <option value="#0000ff">Blue</option>
+    <option value="#80080">Purple</option>
+    <option value="#ffff00">Yellow</option>
+    <option value="#ffA500">Orange</option>
+    <option value="#008000">Green</option>
     </select>
-
-
 
   <label>Paragraph 1 Font Size</label>
-
-    <select name="planet" id="paragraph1-font-size-changer">
-    <option value="MER">10px</option>
-    <option value="VEN">20px</option>
-    <option value="EAR">30px</option>
-    <option value="MAR">40px</option>
-    <option value="JUP">50px</option>
-    <option value="SAT">60px</option>
-    <option value="URA">70px</option>
-    <option value="NEP">80px</option>
+    <select name="planet" class="paragraph1-font-size-changer" onchange="changeFontSize(this)">
+    <option value="10px">10px</option>
+    <option value="20px">20px</option>
+    <option value="30px">30px</option>
+    <option value="40px">40px</option>
+    <option value="50px">50px</option>
+    <option value="60px">60px</option>
+    <option value="70px">70px</option>
+    <option value="80px">80px</option>
     </select>
 
-
-
   <label>Change Background Color</label>
-
-    <select name="planet" id="background-color-changer">
-      <option value="WHT">White</option>
-      <option value="BLK">Black</option>
-      <option value="RED">Red</option>
-      <option value="BLU">Blue</option>
-      <option value="PUR">Purple</option>
-      <option value="YEL">Yellow</option>
-      <option value="ORA">Orange</option>
-      <option value="GRE">Green</option>
+    <select name="planet" id="background-color-changer" onchange="changeBackgroundColor(this)">
+      <option value="#ffffff">White</option>
+      <option value="#000000">Black</option>
+      <option value="#ff0000">Red</option>
+      <option value="#0000ff">Blue</option>
+      <option value="#80080">Purple</option>
+      <option value="#ffff00">Yellow</option>
+      <option value="#ffA500">Orange</option>
+      <option value="#008000">Green</option>
     </select>
 
   </form>
