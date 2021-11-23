@@ -32,7 +32,7 @@
   <h1> More HTML & CSS Fun </h1>
 </header>
 
-<div id="first-div">
+<div id="first-div"> <!-- Start 1st Div -->
   <h2 id="hello-world">Hello World</h2>
   <p>
     This is some sample text my IDE generated:
@@ -46,9 +46,9 @@
   </p>
   <img class="planet-img" src="img/Jupiter.jpg" alt="Jupiter" width="300px" height="200px"> <br>
   <a class="planet-link" href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank">Learn More About Jupiter</a>
-</div>
+</div> <!-- End 1st Div -->
 
-<div id="second-div">
+<div id="second-div"> <!-- Start 2nd Div -->
   <h3 id="hello-again">Hello World, Again</h3>
   <p>
     The same sample generated text:
@@ -61,7 +61,58 @@
   </p>
   <img class="planet-img" src="img/Saturn.jpg" alt="Saturn" width="300px" height="200px"> <br>
   <a class="planet-link" href="https://solarsystem.nasa.gov/planets/saturn/overview/" target="_blank">Learn More About Saturn</a>
-</div>
+</div> <!-- End 2nd Div -->
+
+<div class="container"> <!--Start Container Div -->
+  <form class="my-form"> <!-- Start 1st Form -->
+    <div class="form-group"> <!-- Start Form Div -->
+      <label>Name: </label>
+      <input type="text" name="name" placeholder="Full Name">
+      <label>Email: </label>
+      <input type="text" name="email" placeholder="Email Address">
+      <label>Message</label>
+      <textarea name="message" id="message-area" cols="30" rows="10" placeholder="Type Your Message Here:"></textarea>
+      <input class="button" type="submit" value="Submit">
+    </div> <!-- End Form Div -->
+
+  </form> <!-- End 1st Form-->
+
+
+  <form class="second-form"> <!-- Start 2nd Form -->
+    <label id="planet-favorite">What is your favorite planet?</label>
+    <label>Mercury</label><input type="checkbox" value="planets">
+    <label>Venus</label><input type="checkbox" value="planets">
+    <label>Earth</label><input type="checkbox" value="planets" checked>
+    <label>Mars</label><input type="checkbox" value="planets">
+    <label>Jupiter</label><input type="checkbox" value="planets">
+    <label>Saturn</label><input type="checkbox" value="planets">
+    <label>Uranus</label><input type="checkbox" value="planets">
+    <label>Neptune</label><input type="checkbox" value="planets">
+  </form> <!-- End 2nd Form -->
+
+  <form class="third-form"> <!-- Start 3rd Form-->
+    <label>Do you like space?</label>
+    <label>Yes</label><input type="radio" name="space-love" checked>
+    <label>No</label><input type="radio" name="space-love">
+  </form> <!-- End 3rd Form -->
+
+  <form class="forth-form"> <!-- Start 4th Form-->
+    <label id="planet-visit">What planet would you like to visit?</label>
+    <select name="planet" id="planet-selector">
+      <option value="MER">Mercury</option>
+      <option value="VEN">Venus</option>
+      <option value="EAR">Earth</option>
+      <option value="MAR">Mars</option>
+      <option value="JUP">Jupiter</option>
+      <option value="SAT">Saturn</option>
+      <option value="URA">Uranus</option>
+      <option value="NEP">Neptune</option>
+
+    </select>
+
+  </form> <!-- End 4th Form-->
+
+</div> <!--End Container Div -->
 
   <!-- Add your site or application content here -->
   <p>Hello world! This is HTML5 Boilerplate.</p>

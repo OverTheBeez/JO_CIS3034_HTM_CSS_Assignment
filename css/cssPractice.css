@@ -42,3 +42,53 @@
   display: block;
   text-align: center;
 }
+
+.my-form {
+  padding: 20px;
+  border: 3px black solid;
+}
+
+.my-form.form-group {
+  padding-bottom: 15px;
+}
+
+.my-form label {
+  display: block;
+}
+
+.my-form input[type="text"], .my-form textarea {
+  padding: 8px;
+  width: 80%;
+}
+
+.second-form {
+  padding: 20px;
+  text-align: center;
+  border: 3px coral solid;
+}
+
+.second-form input[type="checkbox"] {
+  margin-right: 80px;
+}
+
+.third-form {
+  padding: 20px;
+  text-align: center;
+  border: 3px black solid;
+}
+
+.forth-form {
+  padding: 20px;
+  text-align: center;
+  border: 3px coral solid;
+}
+
+#planet-favorite {
+  display: block;
+  padding: 10px;
+}
+
+#planet-visit {
+  display: block;
+  padding: 10px;
+}
