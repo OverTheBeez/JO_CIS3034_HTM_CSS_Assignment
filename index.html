@@ -24,6 +24,14 @@
   <script src="js/jquery-3.6.0.js"></script>
   <link rel="stylesheet" href="css/cssPractice.css">
 
+  <script>
+    $("header-color-changer").change(function () {
+      var selectedColor = $(this).children("option:selected").val("WHT");
+      alert("You have selected the color: " + selectedColor)
+    });
+
+  </script>
+
 </head> <!-- End of Head Section -->
 
 <body> <!-- Beginning of Body Section -->
@@ -33,8 +41,38 @@
 </header>
 
 <div id="assignment-div">
+
+  <!--
+  <p>
+    This is a test.
+  </p>
+
+  <label>Change Test Paragraph</label>
+  <form id="test">
+    <select name="color" id="color">
+      <option value="color">Blue</option>
+      <option value="color">Red</option>
+
+    </select>
+
+    <select name="font-size" id="font-size">
+      <option value="size">100px</option>
+      <option value="size">200px</option>
+
+    </select>
+
+    <select name="background-color" id="background-color">
+      <option value="b-color">Blue</option>
+      <option value="b-color">Red</option>
+
+    </select>
+
+  </form>
+
+  -->
+
   <label>Change Header Color</label>
-  <form id="user-choice1">
+  <form id="user-choice">
     <select name="planet" id="header-color-changer">
     <option value="WHT">White</option>
     <option value="BLK">Black</option>
@@ -46,10 +84,10 @@
     <option value="GRE">Green</option>
     </select>
 
-  </form>
+
 
   <label>Paragraph 1 Font Size</label>
-  <form id="user-choice2">
+
     <select name="planet" id="paragraph1-font-size-changer">
     <option value="MER">10px</option>
     <option value="VEN">20px</option>
@@ -61,10 +99,10 @@
     <option value="NEP">80px</option>
     </select>
 
-  </form>
+
 
   <label>Change Background Color</label>
-  <form id="user-choice3">
+
     <select name="planet" id="background-color-changer">
       <option value="WHT">White</option>
       <option value="BLK">Black</option>
@@ -173,6 +211,7 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
 </body> <!-- End of Body Section -->
 
 </html>
