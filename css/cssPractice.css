@@ -92,3 +92,9 @@
   display: block;
   padding: 10px;
 }
+
+#assignment-div {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
